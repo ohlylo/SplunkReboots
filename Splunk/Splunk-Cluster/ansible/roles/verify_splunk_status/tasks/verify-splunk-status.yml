@@ -7,3 +7,9 @@
       timeout: 60
       msg: "Timeout waiting for 8089 to respond"
     register: port_check_splunkd
+  
+  - name: "Check Splunk systemd service"
+    ansible.builtin.systemd:
+      name: Splunkd
+      state: started
+    register: systemd_check_splunkd
