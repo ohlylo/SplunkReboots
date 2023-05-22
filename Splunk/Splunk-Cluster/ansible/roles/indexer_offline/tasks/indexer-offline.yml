@@ -1,0 +1,4 @@
+---
+
+  - name: "Shut down Splunk indexers nicely"
+    ansible.builtin.command: /splunk/bin/splunk offline
