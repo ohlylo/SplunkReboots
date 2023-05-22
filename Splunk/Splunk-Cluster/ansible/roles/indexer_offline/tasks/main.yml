@@ -1,0 +1,2 @@
+---
+  include_tasks: indexer-offline.yml
