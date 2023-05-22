@@ -1,0 +1,4 @@
+---
+
+  - name: Reboot Ye Olde Server
+    ansible.builtin.reboot:
