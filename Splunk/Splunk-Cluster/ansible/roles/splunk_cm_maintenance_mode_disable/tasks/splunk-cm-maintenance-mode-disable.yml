@@ -2,9 +2,6 @@
 
   - name: "Take Splunk cluster out of maintenance mode"
     command: /opt/splunk/bin/splunk disable maintenance-mode --answer-yes -auth "admin:vagrant"
-    become: true
-    become_user: splunk
-    become_method: sudo
     changed_when: False
     register: splunk_command_output
 
