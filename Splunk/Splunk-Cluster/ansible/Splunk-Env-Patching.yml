@@ -16,6 +16,7 @@
 
 - name: "Indexers"
   hosts: splunk_indexers
+  serial: 1
   roles:
     - indexer_offline
     - reboot
