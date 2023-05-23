@@ -1,6 +1,24 @@
 # SplunkReboots
 Ansible roles to manipulate Splunk clusters, particularly to automate reboots after OS patches
 
+## Basic Order of Operations
+1) Check all servers in inventory with ping to see who's alive
+2) Work on the Cluster Manager: 
+  a. Enable maintenance mode
+  b. Reboot the server
+  c. Wait for it to ping again
+  d. Verify that Splunkd starts up
+3) Work on the Indexers, serially, one at a time:
+  a. Reboot the server
+  c. Wait for it to ping again
+  d. Verify that Splunkd starts up
+4) Work on the Deployer and Search Heads: 
+  a. Reboot the server
+  c. Wait for it to ping again
+  d. Verify that Splunkd starts up
+5) Work on the Cluster Manager again:
+  a. Disable maintenance mode
+
 ## Role Descriptions
 ### indexer_offline
 Executes ```splunk offline``` on a Splunk clustered indexer
