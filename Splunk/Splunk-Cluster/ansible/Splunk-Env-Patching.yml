@@ -37,3 +37,8 @@
     - reboot
     - verify_status
     - verify_splunk_status
+    
+- name: "Indexer Cluster Manager Again"
+  hosts: splunk_manager
+  roles:
+    - splunk_cm_maintenance_mode_disable
