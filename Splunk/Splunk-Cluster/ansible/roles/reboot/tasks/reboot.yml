@@ -2,3 +2,5 @@
 
   - name: Reboot Ye Olde Server
     ansible.builtin.reboot:
+      reboot_command: reboot now
+      reboot_timeout: 3600
